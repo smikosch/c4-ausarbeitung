@@ -36,7 +36,7 @@
 % Abbildungsverzeichnis soll im Inhaltsverzeichnis aufgeführt sein
 % Linie zwischen Header und Text.
 % KOMA-Script für deutsches Layout.
-\documentclass[fontsize=11pt, bibliography=totoc, listof=totoc, headsepline]{scrbook}
+\documentclass[fontsize=11pt, bibliography=totoc, listof=totoc, headsepline, a4paper]{scrbook}
 %----------------------------------------------------------------------------------------
 
 % Seitenstil und Sprachoptionen ---------------------------------------------------------
@@ -49,13 +49,13 @@
 \usepackage{fix-cm}
 \usepackage{setspace}
 \usepackage{scrhack}
-
-\usepackage{ngerman} % Sprache Deutsch
+  
+\usepackage[ngerman]{babel} % Sprache Deutsch
 \usepackage[ansinew]{inputenc} % Eingabekodierung festlegen
 \usepackage[T1]{fontenc}
 \usepackage[final, activate, verbose=true]{microtype}
 
-\usepackage{html, a4} % Papierformat festlegen
+\usepackage{html} % Papierformat festlegen
 \ifx\smallborder\undefined\else
 \usepackage{a4wide} % kleinere Ränder
 \fi
@@ -219,7 +219,7 @@
 
 % hier Dateien mit den Kapiteln einbinden
 \input{Einleitung.tex}
-\input{Teilprobleme_und_Lösungsansätze.tex}
+\input{Teilprobleme_und_Loesungsansaetze.tex}
 \input{Realisierung.tex}
 \input{Programmdokumentation.tex}
 \input{Ergebnisse.tex}
