@@ -2,7 +2,7 @@
 
 Diese inoffizielle LaTeX-Vorlage ist für Diplomarbeiten
 des Fachbereichs Informatik der TU Dortmund gedacht und
-bietet neben einem vollst�ndigen Grundgerüst mit zu den
+bietet neben einem vollständigen Grundgerüst mit zu den
 offiziellen TU-Deckblättern passender Titelseite auch 
 diverse Codebeispiele für Bilder, Formeln, Auflistungen
 und Programmcode sowie ein Wasserzeichen für Entwurfs-
