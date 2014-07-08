@@ -1,13 +1,11 @@
-=======================================================
-LaTeX-Vorlage f�r Diplomarbeiten Version 0.41
-=======================================================
+### LaTeX-Vorlage für Diplomarbeiten Version 0.41
 
-Diese inoffizielle LaTeX-Vorlage ist f�r Diplomarbeiten
+Diese inoffizielle LaTeX-Vorlage ist für Diplomarbeiten
 des Fachbereichs Informatik der TU Dortmund gedacht und
-bietet neben einem vollst�ndigen Grundger�st mit zu den
-offiziellen TU-Deckbl�ttern passender Titelseite auch 
-diverse Codebeispiele f�r Bilder, Formeln, Auflistungen
-und Programmcode sowie ein Wasserzeichen f�r Entwurfs-
+bietet neben einem vollst�ndigen Grundgerüst mit zu den
+offiziellen TU-Deckblättern passender Titelseite auch 
+diverse Codebeispiele für Bilder, Formeln, Auflistungen
+und Programmcode sowie ein Wasserzeichen für Entwurfs-
 versionen.
 
 Es wird empfohlen die Vorlage in Kombination mit der
@@ -18,9 +16,9 @@ Die Datei output.tco ist ein TexNicCenter-Ausgabeprofil
 zur direkten Ausgabe im PDF-Format.
 
 
-=======================================================
-Build instructions for openSUSE
-=======================================================
+
+### Build instructions for openSUSE
+
 
 Additional packages needed:
 
