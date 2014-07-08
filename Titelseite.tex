@@ -1,0 +1,82 @@
+%========================================================================================
+% LaTeX-Diplomarbeitsvorlage
+% TU Dortmund, Informatik Lehrstuhl VII
+% Denis Fisseler 2011 (fisseler@ls7.cs.tu-dortmund.de)
+%========================================================================================
+\begin{titlepage}
+
+\begin{textblock}{150}(30.5,10.75)%
+\raggedright
+\includegraphics[width=83.25mm]{images/tud_logo.pdf}%
+\end{textblock}
+
+\begin{textblock}{150}(21.2,39.1)%
+\raggedright\sf\Huge
+{\color{red}\rule{5mm}{5mm}}%\hspace{4.0mm}\includegraphics[width=90mm]{images/fi_text.pdf}
+%{\fontsize{29.75}{36}\selectfont\color{tugreen}fakultät für informatik}%
+\end{textblock}
+
+\begin{textblock}{150}(30.4,40.32)%
+\raggedright
+\includegraphics[width=90mm]{images/fi_text.pdf}
+\end{textblock}
+
+\begin{textblock}{89}(35.0,67.75)%
+\begin{minipage}{80mm}
+	\vfill
+	\begin{center}
+	\huge \sf
+	\Arbeitsbezeichnung
+	
+	\vspace{1cm}
+	\large\sf 
+	\begin{onehalfspace}{\Large\Arbeitstitel}\end{onehalfspace}
+	
+	\vspace{15mm}
+	\Autoren
+
+%	\vspace{5mm}
+%  \href{mailto:\Mailadresse}{\small \Mailadresse}
+
+	\today
+	\end{center}
+	\vfill
+\end{minipage}\end{textblock}
+
+\begin{textblock}{150}(44.25,208)%
+\begin{minipage}{120mm}
+	\large
+	\raggedright
+	\sf
+	\textbf{\Korrektorentitel:}\\
+	\BetreuerA\\
+	\ifx\BetreuerB\undefined\else\BetreuerB\\\fi
+	\ifx\BetreuerC\undefined\else\BetreuerC\\\fi
+	\ifx\BetreuerD\undefined\else\BetreuerD\\\fi
+\end{minipage}
+\end{textblock}
+
+\ifx\Lehrstuhllogo\undefined\else
+\begin{textblock}{150}(30.5,242.0)%
+\includegraphics[width=11.25mm]{\Lehrstuhllogo}
+\end{textblock}
+\fi
+
+\begin{textblock}{150}(44.25,242.0)%
+\begin{minipage}{120mm}
+	\fontsize{11.75pt}{11.75pt}\selectfont
+	\raggedright
+	\sf
+	\Lehrstuhl\\
+	\Lehrstuhltitel\\
+\end{minipage}
+\end{textblock}
+
+
+\begin{textblock}{150}(30.65,266.0)%
+\includegraphics[height=11mm]{images/fi_logo.pdf}
+\end{textblock}
+
+\vspace*{20cm}
+
+\end{titlepage}

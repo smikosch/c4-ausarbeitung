@@ -1,0 +1,249 @@
+%========================================================================================
+% LaTeX-Diplomarbeitsvorlage
+% TU Dortmund, Informatik Lehrstuhl VII
+% Denis Fisseler 2009 (fisseler@ls7.cs.tu-dortmund.de)
+%========================================================================================
+
+%========================================================================================
+% Persönliche Daten (in dieser Sektion die persönlichen Daten eintragen)
+%========================================================================================
+\newcommand \Autoren{Arno~Nym, Hans~Wurst, Karl~Komisch, Erna~Emsig}
+\newcommand \Arbeitsbezeichnung{Projektarbeit}
+\newcommand \Arbeitstitel{Dieser lange Projektarbeitstitel wird auf der Titelseite automatisch umgebrochen.}
+\newcommand \Korrektorentitel{Betreuer}
+\newcommand \BetreuerA{Dipl.-Inform.~Denis~Fisseler}
+%\newcommand \BetreuerB{}
+%\newcommand \BetreuerC{}
+%\newcommand \BetreuerD{}
+\newcommand \Lehrstuhl{Lehrstuhl Informatik VII}
+\newcommand \Lehrstuhltitel{Graphische Systeme}
+\newcommand \Lehrstuhllogo{images/ls7_logo_640.jpg}
+
+%\newcommand \smallborder{1} % kleinere Ränder
+%\newcommand \showWatermark{1} % Wasserzeichen einfügen
+\newcommand \showoverfullbox{1} % übervolle Boxen durch schwarze Kästchen am Rand sichtbar machen
+\newcommand \noparindentbutparskip{1} % Absätze mit Abstand statt Einrückung
+%========================================================================================
+
+
+
+
+%========================================================================================
+% Dokumentenoptionen (in dieser Sektion keine Veränderungen vornehmen)
+%========================================================================================
+% Schriftgröße
+% Literaturverzeichnis soll im Inhaltsverzeichnis aufgeführt sein
+% Abbildungsverzeichnis soll im Inhaltsverzeichnis aufgeführt sein
+% Linie zwischen Header und Text.
+% KOMA-Script für deutsches Layout.
+\documentclass[fontsize=11pt, bibliography=totoc, listof=totoc, headsepline]{scrbook}
+%----------------------------------------------------------------------------------------
+
+% Seitenstil und Sprachoptionen ---------------------------------------------------------
+\usepackage{scrpage2}
+\ihead{\leftmark}
+\ohead{\rightmark}
+\chead{}
+\pagestyle{scrheadings}
+\automark[section]{chapter}
+\usepackage{fix-cm}
+\usepackage{setspace}
+\usepackage{scrhack}
+
+\usepackage{ngerman} % Sprache Deutsch
+\usepackage[ansinew]{inputenc} % Eingabekodierung festlegen
+\usepackage[T1]{fontenc}
+\usepackage[final, activate, verbose=true]{microtype}
+
+\usepackage{html, a4} % Papierformat festlegen
+\ifx\smallborder\undefined\else
+\usepackage{a4wide} % kleinere Ränder
+\fi
+
+\usepackage[pdftex]{graphicx} % Grafikpaket einbinden
+\usepackage[pdftex]{color} % Farbpaket einbinden
+\usepackage{eso-pic}
+\usepackage{lmodern}
+%----------------------------------------------------------------------------------------
+
+% Paket für absolute Positionierung -----------------------------------------------------
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{0mm}{0mm}
+%----------------------------------------------------------------------------------------
+
+% ein paar zusätzliche Farben definieren ------------------------------------------------
+\definecolor{darkred}{rgb}{0.5, 0.0, 0.0}
+\definecolor{darkgreen}{rgb}{0.0, 0.5, 0.0}
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.5}
+\definecolor{tugreen}{RGB}{132,184,24}
+%----------------------------------------------------------------------------------------
+
+% Zusätzliche Pakete einbinden ----------------------------------------------------------
+\usepackage{subfigure} % Packet für Unterabbildungen
+\usepackage{amsmath}
+\usepackage{amssymb} % um das Symbol R für die Reellen Zahlen schön anzuzeigen
+%----------------------------------------------------------------------------------------
+
+% PDF Einstellungen ---------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup
+{
+	pdfauthor = {\Autoren},
+	pdftitle = {\Arbeitstitel},
+	pdfsubject = {\Arbeitsbezeichnung},
+	pdfproducer = {LaTeX},
+	pdfview = FitV, % FitH
+	pdfstartview = FitV,
+	pdfhighlight = /I,
+	pdfborder = 0 0 0, % keine Box um die Links!
+	colorlinks = false,
+% linkcolor=BrickRed, 
+% citecolor=BrickRed,
+% urlcolor=black,
+% linktocpage, 
+	bookmarksopen,
+  bookmarksopenlevel = 1,
+	bookmarksnumbered = false,
+	plainpages = false
+}
+%----------------------------------------------------------------------------------------
+
+%\usepackage[hyperref=false]{scrhack}
+
+% Paket für Code-Listings ---------------------------------------------------------------
+\usepackage{listings}
+\lstloadlanguages{C++, XML}
+\lstset{
+	basicstyle = \ttfamily,%\scriptsize\mdseries,
+	keywordstyle = \bfseries\color{blue},
+	identifierstyle = ,
+	commentstyle = \color{darkgreen},	
+	stringstyle = \color{darkred},
+	numbers = left,
+	numberstyle = \tiny,
+	stepnumber = 1,
+	breaklines = true,
+	numbersep = 5pt,
+	frame=none,
+	showstringspaces = false,
+	tabsize = 4,
+	captionpos = b,
+	float = htbp,
+	language = C++
+}
+%----------------------------------------------------------------------------------------
+
+% Absatz mit Abstand statt Einrückung ---------------------------------------------------
+\ifx\noparindentbutparskip\undefined\else
+\parindent 0pt
+\parskip 0.5\baselineskip
+\makeatletter
+\g@addto@macro{\@afterheading}{\vspace{-\parskip}}
+\makeatother
+\fi
+%----------------------------------------------------------------------------------------
+
+% Abkürzungen für oft verwendete Referenzbefehle ----------------------------------------
+\newcommand{\degree}{\ensuremath{^\circ}}
+\newcommand{\figref}[1]{Abbildung~\ref{#1}}
+\newcommand{\tabref}[1]{Tabelle~\ref{#1}}
+\newcommand{\secref}[1]{Kapitel~\ref{#1}}
+\renewcommand{\eqref}[1]{Gleichung~\ref{#1}}
+%----------------------------------------------------------------------------------------
+
+% Anzeige übervoller Boxen --------------------------------------------------------------
+\ifx\showoverfullbox\undefined\else
+\overfullrule=10pt
+\fi
+%----------------------------------------------------------------------------------------
+
+% Wasserzeichen -------------------------------------------------------------------------
+\ifx\showWatermark\undefined\else
+\usepackage{multido}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{color}
+\makeatletter
+\AddToShipoutPicture
+{
+	\multido{\i=0+150}{5}
+	{
+		\multido{\n=0+200}{5}
+		{
+			\put(\i,\n){\makebox(0,0){\rotatebox{45}{\includegraphics[width=0.4\textwidth]{images/watermark.pdf}}}}
+		}
+	}
+}
+\makeatother
+\fi
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Titelseite ----------------------------------------------------------------------------
+\pdfbookmark{Titelseite}{pdf:title}
+\pagenumbering{alph}
+\pagestyle{empty}
+\input{Titelseite.tex}
+\cleardoublepage
+%----------------------------------------------------------------------------------------
+
+% Erklärung -----------------------------------------------------------------------------
+%\pagenumbering{roman} % Seitennummerierung mit römischen Zahlen
+%\pagestyle{plain}
+%\input{Erklaerung.tex}
+%\clearpage
+%----------------------------------------------------------------------------------------
+
+% Inhaltsverzeichnis --------------------------------------------------------------------
+\pagestyle{plain}
+\pagenumbering{roman}
+\cleardoublepage %pdf link nicht auf leere seite vor inhaltsverzeichnis zeigen lassen
+\pdfbookmark{Inhaltsverzeichnis}{pdf:toc}
+\tableofcontents
+
+\cleardoublepage
+%========================================================================================
+
+
+
+
+%========================================================================================
+% Inhalte (in dieser Sektion die eigenen Inhalte einbinden)
+%========================================================================================
+\setcounter{secnumdepth}{3} % definiert, bis zu welcher Tiefe sie subsub*sections nummeriert werden
+\pagenumbering{arabic} % Seitennummrierung mit arabischen Zahlen
+\pagestyle{scrheadings} % Seitenstil setzen
+
+% hier Dateien mit den Kapiteln einbinden
+\input{Einleitung.tex}
+\input{Teilprobleme_und_Lösungsansätze.tex}
+\input{Realisierung.tex}
+\input{Programmdokumentation.tex}
+\input{Ergebnisse.tex}
+% ...
+\input{Zusammenfassung.tex}
+% ...
+%----------------------------------------------------------------------------------------
+
+% Literaturverzeichnis ------------------------------------------------------------------
+% Literaturverweise mit Abkürzungen der Autorennamen nach DIN angezeigen
+\bibliographystyle{alphadin}
+\bibliography{references}
+%----------------------------------------------------------------------------------------
+
+% Abbildungsverzeichnis -----------------------------------------------------------------
+\listoffigures
+%----------------------------------------------------------------------------------------
+
+% Anhang --------------------------------------------------------------------------------
+\begin{appendix}
+\input{Anhang_A.tex}
+\input{Latex_Beispielcode.tex}
+% ...
+\end{appendix}
+%========================================================================================
+
+\end{document}
